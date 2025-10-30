@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "format": "cpp",
+        "xstring": "cpp",
+        "iosfwd": "cpp",
+        "vector": "cpp"
+    }
+}

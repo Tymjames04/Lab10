@@ -71,6 +71,7 @@ public:
     }
     //stripzeros handles removing excess leading and trailing 0s after addition.
     string stripzeros(string &stripped){
+        //handles when there is a decimal
         if(stripped.find('.') != string::npos){
             int pos = stripped.find('.');
             for(int i = 1; i < pos-1; i++){
@@ -90,6 +91,7 @@ public:
                 }
             }
             if(stripped == "+0.0" || stripped == "-0.0") return ("0");
+        //handles when there is no decimal
         }else{
             for(int i = 1; i < stripped.length(); i++){
                 if(stripped[i] == '0'){

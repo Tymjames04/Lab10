@@ -91,6 +91,14 @@ public:
             }
             if(stripped == "+0.0" || stripped == "-0.0") return ("0");
         }else{
+            for(int i = 1; i < stripped.length(); i++){
+                if(stripped[i] == '0'){
+                    stripped.erase(i, 1);
+                    i--;
+                }else{
+                    break;
+                }
+            }
             if(stripped == "+0" || stripped == "-0") return ("0");
         }
         return(stripped);
